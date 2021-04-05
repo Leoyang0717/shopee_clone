@@ -68,3 +68,19 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `yarn build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+---
+
+## 安裝webpack
+
+在安裝時若遇到此問題是因為npm的bug導致
+```
+npm ERR! code ERESOLVE
+npm ERR! Cannot read property 'length' of undefined
+```
+Temporary solutions:
+
+* Use --legacy-peer-deps
+* Use Node.js 14.x / NPM 6.x
+
+參考網址：https://github.com/webpack/webpack-dev-server/issues/2851
