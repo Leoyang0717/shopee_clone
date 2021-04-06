@@ -80,7 +80,7 @@ npm ERR! Cannot read property 'length' of undefined
 ```
 Temporary solutions:
 
-* Use --legacy-peer-deps
+* Use --legacy-peer-deps(以npm版本4到版本6的樣式安裝時，忽略所有peerDependencies)  
 * Use Node.js 14.x / NPM 6.x
 
 參考網址：https://github.com/webpack/webpack-dev-server/issues/2851
