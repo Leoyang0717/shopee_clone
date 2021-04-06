@@ -83,4 +83,51 @@ Temporary solutions:
 * Use --legacy-peer-deps(以npm版本4到版本6的樣式安裝時，忽略所有peerDependencies)  
 * Use Node.js 14.x / NPM 6.x
 
-參考網址：https://github.com/webpack/webpack-dev-server/issues/2851
+[參考網址](https://github.com/webpack/webpack-dev-server/issues/2851)
+## 安裝webpack-dev-server
+
+遇到一個問題如果使用要啟動server時使用
+```
+    "start": "cross-env NODE_ENV=development webpack serve",
+```
+會出現錯誤
+```
+Error: Cannot find module 'webpack-cli/bin/config-yargs'
+Require stack:
+- /Users/cyberbiz/Desktop/react/shopee_clone/node_modules/webpack-dev-server/bin/webpack-dev-server.js
+```
+解決方式：
+使用`webpack serve`
+[參考網址](https://stackoverflow.com/questions/40379139/cannot-find-module-webpack-bin-config-yargs)
+
+如果又遇到一個問題
+
+```
+[webpack-cli] TypeError: validateOptions is not a function
+```
+那麼可以下 `npm update` 解決
+
+## eslint
+
+忽略某些語法不檢查可以在語法後面加上
+
+```
+var ignoreESLintLine = 0; // eslint-disable-line
+// or
+/* eslint-disable */
+var a = 0;
+var b = 1;
+/* eslint-enable */
+```
+
+如果想要忽略整個專案請到 `.eslintignore` 填入檔案名稱
+
+ex: 
+```
+build
+dist
+node_modules
+public
+src/IMHappyCode.js
+!.eslintrc.js
+```
